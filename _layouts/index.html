@@ -32,8 +32,10 @@
     <link href="{{ base }}/css/style.css" rel="stylesheet" type="text/css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700|Roboto+Slab:400,700" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" href="https://s3.amazonaws.com/frontend-assets.dnc.org/images/D-circle-logo-favicon.png">
+
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <!-- Twitter Popup -->
@@ -43,54 +45,21 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <div class="site-menu">
-
-                    <a class="menu-item" href="#rsvp">
-                        <div class="menu-icon"></div>
-                        <div class="menu-label">RSVP</div>
-                    </a>
-
-
-
-
-
-                    <a class="menu-item" href="#logistics">
-                        <div class="menu-icon"></div>
-                        <div class="menu-label">Logistics</div>
-                    </a>
-
-                    <a class="menu-item" href="#registry">
-                        <div class="menu-icon"></div>
-                        <div class="menu-label">Registry</div>
-                    </a>
-
-                    <a class="menu-item" href="#about">
-                        <div class="menu-icon"></div>
-                        <div class="menu-label">About</div>
-                    </a>
-
+            <div class="header-inner">
+                <div class="invite-img">
+                    <img src="{{ base }}/min_images/wedding-invite.png">
+                </div>
             </div>
         </div>
         <div id="main">
-            <div class="site-section active" id="rsvp">
-                <div class="section-inner">
-                    <h1>RSVP</h1>
-                    {% include form.html %}
-                </div>
-            </div>
-            <div class="site-section" id="logistics">
-                <h1>Logistics</h1>
-            </div>
-            <div class="site-section" id="registry">
-                <h1>Registry</h1>
-            </div>
-            <div class="site-section" id="about">
-                <h1>About</h1>
-            </div>
+            {{ page.content | markdownify }}
+            <a class="rsvp pure-button" href="http://evite.me/WAV5yYxfzX">RSVP</a>
         </div>
     </div>
     <div id="footer">
-
+        <div class="contact-box">
+            Contact: <a href="mailto:cupaiolisanders@gmail.com">cupaiolisanders@gmail.com</a>
+        </div>
     </div>
     <!-- Scripts -->
     <script src="{{ base }}/theme_functions.js"></script>

@@ -10,30 +10,30 @@
 //Theme Colors
 //Use the brand colors for your theme colors
 //Body and Heading text Colors
-$theme_body: $brand_dk_blue;
-$theme_body_link: $brand_lt_blue;
-$theme_body_link_hover: $brand_dk_blue;
-$theme_heading: $brand_dk_blue;
+$theme_body: $brand_black;
+$theme_body_link: $brand_black;
+$theme_body_link_hover: $brand_black;
+$theme_heading: $brand_black;
 //Footer Colors
-$theme_footer_bg: $brand_dk_blue;
+$theme_footer_bg: $brand_black;
 $theme_footer_txt: $brand_white;
-$copyright_link: $brand_lt_blue;
+$copyright_link: $brand_white;
 $copyright_link_hover: $brand_white;
 //Header Colors
 $theme_header_bg: $brand_black;
 $theme_header_txt: $brand_white;
 //Button Colors
-$theme_button_bg: $brand_dk_blue;
+$theme_button_bg: $brand_black;
 $theme_button_txt: $brand_white;
-$hover_button_bg: $brand_dk_blue;
-$hover_button_txt: $brand_white;
+$hover_button_bg: $brand_white;
+$hover_button_txt: $brand_black;
 //BSD Form Colors
 $theme_form_bg: $brand_gray;
 $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_dk_blue;
 $theme_form_btn_txt: $brand_white;
 //Mobile Breakpoints
-$size-largee: 1024px;
+$size-large: 1024px;
 $size-medium: 768px;
 $size-small: 568px;
 //Padding for Sections and Grids
@@ -51,8 +51,21 @@ $transition_type: all .7s ease;
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
 $header_width: 10em;
+.pure-button {
+    border: 3px solid $brand_black;
+}
+a {
+    &:hover {
+        &:not(.pure-button){
+            text-decoration: underline;
+        }
+    }
+}
+@include headings(){
+    text-transform: uppercase;
+}
 #header {
-    position: fixed;
+    //position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -71,6 +84,14 @@ $header_width: 10em;
 
         }
     }
+    text-align: center;
+    .invite-img {
+        display: inline-block;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 #wrapper {
     @include bp-medium($size-medium) {
@@ -78,7 +99,7 @@ $header_width: 10em;
     }
 }
 #main {
-    margin-top: 3em;
+    //margin-top: 3em;
     overflow: hidden;
     .site-section {
         transform: translateX(100%);
@@ -92,4 +113,5 @@ $header_width: 10em;
             height: 100%;
         }
     }
+    padding: 1em 3em;
 }
