@@ -31,7 +31,7 @@
     {% include base.html %}
     <link href="{{ base }}/css/style.css" rel="stylesheet" type="text/css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicon -->
     <link rel="icon" href="https://s3.amazonaws.com/frontend-assets.dnc.org/images/D-circle-logo-favicon.png">
     <!-- Jquery -->
@@ -43,22 +43,54 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1>{{ site.title }}</h1>
+            <div class="site-menu">
+
+                    <a class="menu-item" href="#rsvp">
+                        <div class="menu-icon"></div>
+                        <div class="menu-label">RSVP</div>
+                    </a>
+
+
+
+
+
+                    <a class="menu-item" href="#logistics">
+                        <div class="menu-icon"></div>
+                        <div class="menu-label">Logistics</div>
+                    </a>
+
+                    <a class="menu-item" href="#registry">
+                        <div class="menu-icon"></div>
+                        <div class="menu-label">Registry</div>
+                    </a>
+
+                    <a class="menu-item" href="#about">
+                        <div class="menu-icon"></div>
+                        <div class="menu-label">About</div>
+                    </a>
+
+            </div>
         </div>
         <div id="main">
-            <div class="main-body">
-              {% include form.html form-url="//my.democrats.org/page/sapi/bsd-api-test" %}
+            <div class="site-section active" id="rsvp">
+                <div class="section-inner">
+                    <h1>RSVP</h1>
+                    {% include form.html %}
+                </div>
+            </div>
+            <div class="site-section" id="logistics">
+                <h1>Logistics</h1>
+            </div>
+            <div class="site-section" id="registry">
+                <h1>Registry</h1>
+            </div>
+            <div class="site-section" id="about">
+                <h1>About</h1>
             </div>
         </div>
     </div>
     <div id="footer">
-        <div class="copyright-footer">
-            <div class="copyright-text">
-                <p>Paid for by the Democratic National Committee (202) 863‑8000.</p>
-                <p>This communication is not authorized by any candidate or candidate's committee.</p>
-            </div>
-        </div>
-        <p><a href="https://www.democrats.org/more/privacy-policy" target="_blank">Privacy Policy</a></p>
+
     </div>
     <!-- Scripts -->
     <script src="{{ base }}/theme_functions.js"></script>

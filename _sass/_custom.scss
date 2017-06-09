@@ -20,7 +20,7 @@ $theme_footer_txt: $brand_white;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_white;
 //Header Colors
-$theme_header_bg: $brand_lt_blue;
+$theme_header_bg: $brand_black;
 $theme_header_txt: $brand_white;
 //Button Colors
 $theme_button_bg: $brand_dk_blue;
@@ -38,7 +38,7 @@ $size-medium: 768px;
 $size-small: 568px;
 //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
-$header-padding: 1em;
+$header-padding: 0.5em;
 $body-padding: 1em 3em;
 $body-padding-mobile: 1em;
 $footer-padding: 1em;
@@ -50,3 +50,46 @@ $transition_type: all .7s ease;
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
+$header_width: 10em;
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include bp-medium($size-medium) {
+        width: $header_width;
+        height: 100%;
+    }
+    .site-menu {
+
+        a.menu-item {
+            display: inline-block;
+            text-align: center;
+            padding: 0 1em;
+            color: $brand_white;
+            background: $brand_black;
+
+        }
+    }
+}
+#wrapper {
+    @include bp-medium($size-medium) {
+        margin-left: $header_width;
+    }
+}
+#main {
+    margin-top: 3em;
+    overflow: hidden;
+    .site-section {
+        transform: translateX(100%);
+        height: 0;
+
+        &.active {
+            @include transition;
+            transform: translateX(0);
+            background-color: $brand_gray;
+            display: block;
+            height: 100%;
+        }
+    }
+}
