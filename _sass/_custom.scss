@@ -69,10 +69,10 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    @include bp-medium($size-medium) {
-        width: $header_width;
-        height: 100%;
-    }
+    // @include bp-medium($size-medium) {
+    //     width: $header_width;
+    //     height: 100%;
+    // }
     .site-menu {
 
         a.menu-item {
@@ -94,9 +94,9 @@ a {
     }
 }
 #wrapper {
-    @include bp-medium($size-medium) {
-        margin-left: $header_width;
-    }
+    // @include bp-medium($size-medium) {
+    //     margin-left: $header_width;
+    // }
 }
 #main {
     //margin-top: 3em;
