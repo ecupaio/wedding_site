@@ -12,7 +12,7 @@ Republic Restoratives
 1369 New York Ave NE  
 Washington, DC 20002  
 
-## Accomodations
+## Accommodations
 A block of rooms have been reserved at the following hotel:
 
 Homewood Suites  
