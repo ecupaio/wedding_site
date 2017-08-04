@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Jess and Ed's Wedding Site
 description: Jess and Ed are getting married!
-meta_img: 
+meta_img:
 url:  # the base hostname & protocol for your site, e.g. http://example.com
 timezone: America/New York
 future: true
@@ -39,7 +39,7 @@ defaults:
       path: ""
     values:
       layout: "index"
-#collections:
-#  collection-name:
-#    output: true
-#    permalink: /collection/:title/
+collections:
+ panels:
+   output: true
+   permalink: /:title/

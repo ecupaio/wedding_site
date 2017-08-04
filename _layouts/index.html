@@ -44,16 +44,20 @@
 
 <body>
     <div id="wrapper">
-        <div id="header">
-            <div class="header-inner">
-                <div class="invite-img">
-                    <img src="{{ base }}/min_images/wedding-invite.png">
+        <div id="header"></div>
+        <div id="main">
+            {% assign sortedPanels = site.panels | sort: 'order' %}
+            {% for panel in sortedPanels %}
+            <div class="panel">
+                <div class="panel-overlay" data-bg-hover="background-image: linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url({{ panel.bg-image }})" style="background-image: linear-gradient(to right, rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url({{ panel.bg-image }})">
+                    <h1>{{ panel.title }}</h1>
+                    <div class="panel-toggle"><i class="fa fa-angle-left"></i></div>
+                </div>
+                <div class="panel-content">
+                    {{ panel.content }}
                 </div>
             </div>
-        </div>
-        <div id="main">
-            {{ page.content | markdownify }}
-            <a class="rsvp pure-button" href="http://evite.me/WAV5yYxfzX">RSVP</a>
+            {% endfor %}
         </div>
     </div>
     <div id="footer">
