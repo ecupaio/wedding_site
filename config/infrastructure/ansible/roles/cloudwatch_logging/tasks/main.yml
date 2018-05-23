@@ -1,4 +1,7 @@
 ---
+---
+
+---
 - name: Forward /var/log/messages to CloudWatch
   template:
     src: messages.conf.j2

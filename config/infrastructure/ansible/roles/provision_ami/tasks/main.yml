@@ -1,4 +1,7 @@
 ---
+---
+
+---
 - name: Check out app code
   git:
     repo: ssh://git@github.com/democrats/{{ repo_name }}.git

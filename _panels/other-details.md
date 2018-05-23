@@ -1,6 +1,6 @@
 ---
 title: Wedding Day Details
-bg-image: ../min_images/wedding-day.jpeg
+bg-image: "../min_images/wedding-day.jpeg"
 order: 2
 ---
 

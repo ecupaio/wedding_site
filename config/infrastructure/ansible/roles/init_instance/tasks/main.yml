@@ -1,4 +1,7 @@
 ---
+---
+
+---
 - name: Update hosts file
   command: "echo '127.0.0.1 {{ app_admin_hostname }}' >> /etc/hosts"
 

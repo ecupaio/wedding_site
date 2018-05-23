@@ -1,4 +1,7 @@
 ---
+---
+
+---
 # Used by the Packer Ansible local provisioner.
 - hosts: localhost
   become: yes

@@ -1,6 +1,7 @@
 ---
-layout: null
+layout: 
 ---
+
 {% capture scripts %}
     {% include js/social_links.js %}
     {% include js/functions.js %}

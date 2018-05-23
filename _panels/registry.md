@@ -1,6 +1,6 @@
 ---
 title: Registry
-bg-image: ../min_images/registry.jpg
+bg-image: "../min_images/registry.jpg"
 order: 3
 ---
 
