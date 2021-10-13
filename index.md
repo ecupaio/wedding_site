@@ -1,8 +1,8 @@
 ---
 title: Home Page
 layout: index
-
 ---
+
 Mr. Ed Cupaioli and Dr. Jess Sanders invite you to join us at our union and celebration of love (and free booze!)  at Republic Restoratives in Washington, DC on August 12, 2017 at 12pm.
 
 Attire is casual and pants are optional. Do not wear a suit.  Come in whatever makes you feel beautiful and comfortable. Be prepared to dance.
